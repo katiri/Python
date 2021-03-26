@@ -28,6 +28,7 @@ atualizar_arquivo("\nteste de atualização")
 # ler arquivo
 arquivo = open("teste.txt", "r")
 texto = arquivo.read()
+arquivo.close()
 print(texto)
 
 # abrindo arquivo em pasta específica
@@ -35,12 +36,14 @@ print(texto)
 # arquivo.write("teste")
 
 # manipulado notas de alunos em um arquivo
-# lista_notas = ["João, 10, 10, 9, 5\n", "Pedro, 10, 10, 9, 5\n", "Luiz, 10, 10, 9, 5\n", "Arthur, 10, 10, 9, 5\n"]
-#
-# notas = open("notas.txt", "a")
-#
-# for x in lista_notas:
-#     notas.write(x)
+lista_notas = ["João, 10, 10, 9, 5\n", "Pedro, 10, 10, 9, 5\n", "Luiz, 10, 10, 9, 5\n", "Arthur, 10, 10, 9, 5\n"]
+
+notas = open("notas.txt", "a")
+
+for x in lista_notas:
+    notas.write(x)
+
+notas.close()
 
 lista_medias = []
 def media_notas(nome_arquivo):
@@ -55,6 +58,7 @@ def media_notas(nome_arquivo):
         media = lambda notas: sum([int(i) for i in notas])/4
         print("O aluno", aluno, "teve média", media(dados_aluno))
         lista_medias.append({aluno: media(dados_aluno)})
+    arquivo.close()
     return lista_medias
 
 medias = media_notas("notas.txt")
@@ -63,7 +67,7 @@ print(medias)
 # copiando, movendo e etc arquivos
 def copia_arquivos(nome_arquivo):
     import shutil
-    shutil.copy(nome_arquivo, "C:/Desktop/")
-    # shutil.move(nome_arquivo, "C:/Desktop/")
+    # shutil.copy(nome_arquivo, "C:/Desktop/")
+    shutil.move(nome_arquivo, "C:/Desktop/")
 
 copia_arquivos("teste.txt")
