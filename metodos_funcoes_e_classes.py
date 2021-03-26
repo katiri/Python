@@ -11,17 +11,17 @@ def multiplicacao(a, b):
 def divisao(a, b):
     return a / b
 
-print(soma(1, 2))
-print(soma(4, 5))
-
-print(subtracao(2, 1))
-print(subtracao(4, 1))
-
-print(multiplicacao(2, 1))
-print(multiplicacao(4, 1))
-
-print(divisao(2, 1))
-print(divisao(4, 1))
+# print(soma(1, 2))
+# print(soma(4, 5))
+#
+# print(subtracao(2, 1))
+# print(subtracao(4, 1))
+#
+# print(multiplicacao(2, 1))
+# print(multiplicacao(4, 1))
+#
+# print(divisao(2, 1))
+# print(divisao(4, 1))
 
 # classes
 class Calculadora:
@@ -41,12 +41,12 @@ class Calculadora:
     def divisao(self):
         return self.a / self.b
 
-calculadora = Calculadora(10, 2)
-print(calculadora.a, calculadora.b)
-print(calculadora.soma())
-print(calculadora.subtracao())
-print(calculadora.multiplicacao())
-print(calculadora.divisao())
+# calculadora = Calculadora(10, 2)
+# print(calculadora.a, calculadora.b)
+# print(calculadora.soma())
+# print(calculadora.subtracao())
+# print(calculadora.multiplicacao())
+# print(calculadora.divisao())
 
 # class Calculadora:
 #     def soma(self, a, b):
@@ -86,13 +86,13 @@ class Televisao:
         if self.estado:
             self.canal -= 1
 
-televisao = Televisao()
-print(televisao.estado)
-televisao.power()
-print(televisao.estado)
-print(televisao.canal)
-televisao.aumenta_canal()
-televisao.aumenta_canal()
-print(televisao.canal)
-televisao.diminui_canal()
-print(televisao.canal)
+# televisao = Televisao()
+# print(televisao.estado)
+# televisao.power()
+# print(televisao.estado)
+# print(televisao.canal)
+# televisao.aumenta_canal()
+# televisao.aumenta_canal()
+# print(televisao.canal)
+# televisao.diminui_canal()
+# print(televisao.canal)
