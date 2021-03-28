@@ -74,7 +74,7 @@ print(contador_letras(lista_str))
 soma = lambda a, b: a + b
 print(soma(10, 5))
 
-# dicionario
+# dicionário
 dicionario = {
     "nome": "joão",
     "idade": 19,
@@ -85,6 +85,60 @@ print(dicionario)
 print(dicionario["nome"])
 print(dicionario["idade"])
 print(dicionario["sexo"])
+
+# transformando uma tupla de listas em um dicionário
+tupla_lista = [("nome", "joão"), ("idade", 19), ("sexo", "masculino")]
+print(tupla_lista)
+transformado_dicionario = dict(tupla_lista)
+print(transformado_dicionario)
+
+# evitando erro de chave, se não achar o primeiro argumento mostra o outro
+print(transformado_dicionario.get("nome", "Índice não encontrado"))
+print(transformado_dicionario.get("teste", "Índice não encontrado"))
+
+# verificando se existe uma certa chave em um dicionario (booleano)
+print("nome" in transformado_dicionario)
+print("teste" in transformado_dicionario)
+
+# verificando se existe um valor em um dicionario (booleano)
+print("joão" in transformado_dicionario.values())
+print("arthur" in transformado_dicionario.values())
+
+# adicionando valores em um dicionario
+transformado_dicionario["Nova chave"] = "Novo valor"
+print(transformado_dicionario)
+
+# removendo itens de um dicionario
+del transformado_dicionario["Nova chave"]
+print(transformado_dicionario)
+
+# verificando se uma chave existe durante a exclusão, caso exista, antes de excluir, pop mostra o valor da chave
+print(transformado_dicionario.pop("Nova chave", "Chave não exite"))
+print(transformado_dicionario.pop("sexo", "Chave não exite"))
+print(transformado_dicionario)
+
+# juntando dois dicionários
+dicionario_1 = {'Yan': '1234-5678', 'Pedro': '9999-9999', 'Ana': '8765-4321', 'João': '8887-7778'}
+print(dicionario_1)
+dicionario_2 = {'Yan': '1234-5678', 'Fernando': '4345-5434', 'Luiza': '4567-7654'}
+print(dicionario_2)
+
+for nome in dicionario_2:
+    dicionario_1[nome] = dicionario_2[nome]
+
+print(dicionario_1)
+# ou
+dicionario_3 = {'Roger': '1234-5678', 'Fernanda': '4345-5434', 'Luiz': '4567-7654'}
+print(dicionario_3)
+dicionario_1.update(dicionario_3)
+print(dicionario_1)
+
+# atualizando os valores de um dicionario de forma fácil
+dicionario_1_novo = {nome: '9' + dicionario_1[nome] for nome in dicionario_1}
+print(dicionario_1_novo)
+
+# acessando valores de um dicionario
+print(dicionario_1_novo.values())
 
 # calculadora com funções anônimas e dicionario
 # função anonima não necessariamente precisa de nome
