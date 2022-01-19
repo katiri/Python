@@ -6,7 +6,7 @@
 
 from requests import *
 # requisição do via cep
-response = get("https://cardapioz.com.br")
+response = get("link")
 print(response.status_code)
 print(response.text)
 # print(response.json())
